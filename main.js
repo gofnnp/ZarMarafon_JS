@@ -92,6 +92,7 @@ function elHP() {
 
 function renderHp() {
   this.elHP().style.width = this.hp + '%';
+  this.elHP().innerText = this.hp;
 }
 
 
