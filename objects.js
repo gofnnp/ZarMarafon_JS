@@ -1,4 +1,9 @@
-const logs = {
+import { elHP, renderHp } from "./render.js";
+import { attack } from "./functions.js";
+import { changeHP } from './attack.js';
+import { Player } from "./player.js";
+
+export const logs = {
     start: 'Часы показывали [time], когда [player1] и [player2] бросили вызов друг другу.',
     end: [
         'Результат удара [playerWins]: [playerLose] - труп',
@@ -37,3 +42,44 @@ const logs = {
     ],
     draw: 'Ничья - это тоже победа!'
 };
+
+const player3 = new Player ({
+  player: 1,
+  name: 'SCORPION',
+  hp: 100,
+  img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
+});
+
+console.log(player3);
+
+export const player1 = {
+  player: 1,
+  name: 'SCORPION',
+  hp: 100,
+  img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
+  weapon: ['knife', 'gun'],
+  attack,
+  changeHP,
+  renderHp,
+  elHP,
+};
+
+export const player2 = {
+  player: 2,
+  name: 'SUB-ZERO',
+  hp: 100,
+  img: 'http://reactmarathon-api.herokuapp.com/assets/subzero.gif',
+  weapon: ['knife', 'gun'],
+  attack,
+  changeHP,
+  renderHp,
+  elHP,
+};
+
+export const HIT = {
+  head: 30,
+  body: 25,
+  foot: 20,
+};
+
+export const ATTACK = ['head', 'body', 'foot'];
