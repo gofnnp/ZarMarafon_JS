@@ -1,6 +1,6 @@
 import { player1, player2 } from "./objects.js";
 import { $arenas, $buttonFight, $formFight, $chat } from './query.js';
-import { generateLogs, getRandomInt, createElement, createPlayer } from './functions.js';
+import { generateLogs, getRandomInt, createElement } from './functions.js';
 import { enemyAttack, playerAttack } from './attack.js';
 
 export const showResult = () => {
