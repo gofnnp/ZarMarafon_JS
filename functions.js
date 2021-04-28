@@ -59,28 +59,3 @@ export const createElement = (tag, className) => {
   }
   return $tag;
 };
-
-export const createPlayer = (playerObj) => {
-  const $life = createElement('div', 'life');
-  $life.innerText = playerObj.hp;
-  $life.style.width = '100%';
-
-  const $name = createElement('div', 'name');
-  $name.innerText = playerObj.name;
-
-  const $progressbar = createElement('div', 'progressbar');
-  $progressbar.appendChild($life);
-  $progressbar.appendChild($name);
-
-  const $img = createElement('img');
-  $img.src = playerObj.img;
-
-  const $character = createElement('div', 'character');
-  $character.appendChild($img);
-
-  const $player = createElement('div', 'player'+playerObj.player);
-  $player.appendChild($progressbar);
-  $player.appendChild($character);
-
-  return $player;
-};
